@@ -1,8 +1,10 @@
 import requests
 import json
 
+from get_API_key import get_api_keys_list
+
 api_num = 0
-Api_keys = ""
+Api_keys = get_api_keys_list()
 
 
 def gpt_response(prompt):
