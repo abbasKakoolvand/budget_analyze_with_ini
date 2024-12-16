@@ -16,9 +16,8 @@ asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
 
 def gpt_request(prompt):
-    time.sleep(61)
     available_models = [
-        'gpt-4-turbo',
+        # 'gpt-4-turbo',
         'gpt-4',
         # 'gpt-3.5-turbo',
         "gemini-pro",
@@ -30,6 +29,8 @@ def gpt_request(prompt):
         # 'llama-3.2-90b',
         # # 'claude-3.5-sonnet',
     ]
+    time.sleep(70.0/(len(available_models)-1))
+
 
     # Step 2: Randomly select a model
     selected_model = random.choice(available_models)
